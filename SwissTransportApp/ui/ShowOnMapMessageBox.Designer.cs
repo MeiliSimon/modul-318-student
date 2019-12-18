@@ -109,7 +109,6 @@
             this.Controls.Add(this.showOnMapLabel);
             this.Controls.Add(this.showOnMapGroupBox);
             this.Name = "ShowOnMapMessageBox";
-            this.ShowInTaskbar = false;
             this.showOnMapGroupBox.ResumeLayout(false);
             this.showOnMapGroupBox.PerformLayout();
             this.ResumeLayout(false);
