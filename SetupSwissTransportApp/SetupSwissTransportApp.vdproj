@@ -341,7 +341,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupSwissTransportApp"
         "ProductCode" = "8:{BC4AFB42-EC64-4644-8C20-1AB51AE50C9E}"
-        "PackageCode" = "8:{E00368F6-AFB8-4B56-8F27-42D9EE1327F5}"
+        "PackageCode" = "8:{9C839953-AC2A-4D51-A2D3-68FE4EB21435}"
         "UpgradeCode" = "8:{BF647CB9-8D86-436B-8F26-3757A0DC21C7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
