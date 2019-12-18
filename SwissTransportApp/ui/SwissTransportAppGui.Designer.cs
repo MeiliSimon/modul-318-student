@@ -30,6 +30,9 @@
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timetableTabPage = new System.Windows.Forms.TabPage();
+            this.timeTableTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.destinationLabel = new System.Windows.Forms.Label();
             this.timetableListBox = new System.Windows.Forms.ListBox();
             this.createTimetableButton = new System.Windows.Forms.Button();
             this.timeTableDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -49,9 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.showOnMapButton = new System.Windows.Forms.Button();
-            this.destinationLabel = new System.Windows.Forms.Label();
-            this.timeTableTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.sendMailButton = new System.Windows.Forms.Button();
             this.timetableTabPage.SuspendLayout();
             this.connectionTabPage.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -75,6 +76,34 @@
             this.timetableTabPage.TabIndex = 1;
             this.timetableTabPage.Text = "Abfahrtsplan";
             this.timetableTabPage.UseVisualStyleBackColor = true;
+            // 
+            // timeTableTextBox
+            // 
+            this.timeTableTextBox.Location = new System.Drawing.Point(503, 75);
+            this.timeTableTextBox.MinimumSize = new System.Drawing.Size(4, 24);
+            this.timeTableTextBox.Name = "timeTableTextBox";
+            this.timeTableTextBox.Size = new System.Drawing.Size(100, 22);
+            this.timeTableTextBox.TabIndex = 3;
+            this.timeTableTextBox.Text = "HH : mm";
+            this.timeTableTextBox.TextChanged += new System.EventHandler(this.timeTableTextBox_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(437, 78);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Zeit";
+            // 
+            // destinationLabel
+            // 
+            this.destinationLabel.AutoSize = true;
+            this.destinationLabel.Location = new System.Drawing.Point(146, 134);
+            this.destinationLabel.Name = "destinationLabel";
+            this.destinationLabel.Size = new System.Drawing.Size(41, 17);
+            this.destinationLabel.TabIndex = 5;
+            this.destinationLabel.Text = "Nach";
             // 
             // timetableListBox
             // 
@@ -252,7 +281,7 @@
             // 
             // showOnMapButton
             // 
-            this.showOnMapButton.Location = new System.Drawing.Point(29, 503);
+            this.showOnMapButton.Location = new System.Drawing.Point(29, 496);
             this.showOnMapButton.Name = "showOnMapButton";
             this.showOnMapButton.Size = new System.Drawing.Size(144, 31);
             this.showOnMapButton.TabIndex = 1;
@@ -260,39 +289,22 @@
             this.showOnMapButton.UseVisualStyleBackColor = true;
             this.showOnMapButton.Click += new System.EventHandler(this.showOnMapButton_Click);
             // 
-            // destinationLabel
+            // sendMailButton
             // 
-            this.destinationLabel.AutoSize = true;
-            this.destinationLabel.Location = new System.Drawing.Point(146, 134);
-            this.destinationLabel.Name = "destinationLabel";
-            this.destinationLabel.Size = new System.Drawing.Size(41, 17);
-            this.destinationLabel.TabIndex = 5;
-            this.destinationLabel.Text = "Nach";
-            // 
-            // timeTableTextBox
-            // 
-            this.timeTableTextBox.Location = new System.Drawing.Point(503, 75);
-            this.timeTableTextBox.MinimumSize = new System.Drawing.Size(4, 24);
-            this.timeTableTextBox.Name = "timeTableTextBox";
-            this.timeTableTextBox.Size = new System.Drawing.Size(100, 24);
-            this.timeTableTextBox.TabIndex = 3;
-            this.timeTableTextBox.Text = "HH : mm";
-            this.timeTableTextBox.TextChanged += new System.EventHandler(this.timeTableTextBox_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(437, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Zeit";
+            this.sendMailButton.Location = new System.Drawing.Point(239, 496);
+            this.sendMailButton.Name = "sendMailButton";
+            this.sendMailButton.Size = new System.Drawing.Size(110, 30);
+            this.sendMailButton.TabIndex = 2;
+            this.sendMailButton.Text = "Mail senden";
+            this.sendMailButton.UseVisualStyleBackColor = true;
+            this.sendMailButton.Click += new System.EventHandler(this.sendMailButton_Click);
             // 
             // SwissTransportAppGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 538);
+            this.Controls.Add(this.sendMailButton);
             this.Controls.Add(this.showOnMapButton);
             this.Controls.Add(this.tabControl);
             this.Name = "SwissTransportAppGui";
@@ -331,6 +343,7 @@
         private System.Windows.Forms.Label destinationLabel;
         private System.Windows.Forms.TextBox timeTableTextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button sendMailButton;
     }
 }
 

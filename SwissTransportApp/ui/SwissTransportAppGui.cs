@@ -168,5 +168,31 @@ namespace SwissTransportApp
             return "";
         }
 
+        private void sendMailButton_Click(object sender, EventArgs e)
+        {
+            string mailContent = "";
+            foreach (string content in connectionsListBox.Items)
+            {
+                if (content != null)
+                {
+                    mailContent += content + "%0a";
+                }
+            }
+
+            if (mailContent != "")
+            {
+                System.Diagnostics.Process.Start(
+                String.Format("mailto:{0}?subject={1}&body={2}",
+                  "",
+                  "Verbindung von: "+departurePointComboBox.Text + " nach: " + destinationComboBox.Text,
+                  mailContent));
+
+            }
+            else
+            {
+                MessageBox.Show("Es wurden keine Verbindungen gefunden");
+            }
+
+        }
     }
 }
